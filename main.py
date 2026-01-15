@@ -14,14 +14,14 @@ PAGE_LIMIT = 10
 if not os.path.exists("tracks"):
     os.mkdir("tracks")
 
-session = AiohttpSession(
-    proxy="http://localhost:10808"
-)
+#session = AiohttpSession(
+#    proxy="http://localhost:10808"
+#)
 
 bot = Bot(
     open("token", "r").readline(),
-    session,
-    DefaultBotProperties(parse_mode=ParseMode.HTML)
+#    session,
+    default=DefaultBotProperties(parse_mode=ParseMode.HTML)
 )
 
 dp = Dispatcher()
